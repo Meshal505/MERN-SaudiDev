@@ -37,7 +37,7 @@ const Login = ({ login, isAuthenticated }) => {
             placeholder='Email Address'
             name='email'
             value={email}
-            onChange={e => onChange(e)}
+            onChange={(e) => onChange(e)}
             required
           />
         </div>
@@ -47,7 +47,7 @@ const Login = ({ login, isAuthenticated }) => {
             placeholder='Password'
             name='password'
             value={password}
-            onChange={e => onChange(e)}
+            onChange={(e) => onChange(e)}
             minLength='6'
           />
         </div>
@@ -65,7 +65,9 @@ Login.propTypes = {
   isAuthenticated: PropTypes.bool
 };
 
-const mapStateToProps = state => ({
+// Here we r getting the new state from redux
+const mapStateToProps = (state) => ({
+//this Auth is what we have in the index reducer which we extract from /auth reducer 
   isAuthenticated: state.auth.isAuthenticated
 });
 

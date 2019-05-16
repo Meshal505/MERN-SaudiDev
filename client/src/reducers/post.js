@@ -17,6 +17,7 @@ import {
   };
   
   export default function(state = initialState, action) {
+    //Destructring , so we pull type and payload from action 
     const { type, payload } = action;
   
     switch (type) {
